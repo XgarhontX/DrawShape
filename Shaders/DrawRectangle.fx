@@ -62,8 +62,8 @@ float4 PS_DrawRectangle(float4 pos : SV_Position, float2 texcoord : TEXCOORD) : 
 
 // Technique ///////////////////////////////////////////////////////////////////////////////////////
 technique DrawRectangle {
-	pass Final {
-		VertexShader = PostProcessVS; //default
-		PixelShader = PS_DrawRectangle;
-	}
+    pass Final {
+        VertexShader = PostProcessVS; //default
+        PixelShader = PS_DrawRectangle;
+    }
 }
