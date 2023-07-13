@@ -7,21 +7,21 @@ uniform int StartX <
     ui_min = 0;
     ui_max = BUFFER_WIDTH;
     ui_label = "StartX";
-> = BUFFER_WIDTH/4;
+> = BUFFER_WIDTH/2;
 
 uniform int StartY <
     ui_type = "drag";
     ui_min = 0;
     ui_max = BUFFER_HEIGHT;
     ui_label = "StartY";
-> = BUFFER_HEIGHT/4;
+> = BUFFER_HEIGHT/2;
 
 uniform int Radius <
     ui_type = "drag";
     ui_min = 0;
     ui_max = BUFFER_WIDTH;
     ui_label = "Raidus";
-> = BUFFER_WIDTH/4;
+> = BUFFER_WIDTH/8;
 
 uniform float3 Color <
     ui_type = "color";
