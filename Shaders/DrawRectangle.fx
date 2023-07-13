@@ -45,7 +45,7 @@ uniform float Opacity <
 // PixelShader /////////////////////////////////////////////////////////////////////////////////////
 float4 PS_DrawRectangle(float4 pos : SV_Position, float2 texcoord : TEXCOORD) : SV_Target {
     //get orig pixel
-	  float4 orig = tex2D(ReShade::BackBuffer, texcoord);
+	float4 orig = tex2D(ReShade::BackBuffer, texcoord);
 
     //if rectangle pixel
     if (pos.x >= StartX && pos.x <= StartX + SizeX &&
@@ -55,15 +55,14 @@ float4 PS_DrawRectangle(float4 pos : SV_Position, float2 texcoord : TEXCOORD) : 
         //blend orig with draw, via Opacity
         return lerp(orig, draw, Opacity);
     } else {
-        //do nothing
-        discard;
+    	discard;
     }
 }
 
 // Technique ///////////////////////////////////////////////////////////////////////////////////////
 technique DrawRectangle {
-    pass Final {
-        VertexShader = PostProcessVS; //default
-        PixelShader = PS_DrawRectangle;
-    }
+	pass Final {
+		VertexShader = PostProcessVS; //default
+		PixelShader = PS_DrawRectangle;
+	}
 }
